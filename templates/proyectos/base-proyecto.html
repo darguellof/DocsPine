@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block customCSS %}
+
+{% block customCSS2 %}
+    
+{% endblock %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <!-- Este bloque no se elimina porque sirve para editar proyectos -->
+    {% block editProyecto %}
+
+    {% endblock %}
+
+    <div class="container" id="liDocs">
+        <div class="row">
+            <div class="three columns">
+                {% block filters %}
+                    
+                {% endblock %}
+            </div>
+            <div class="nine columns">
+                {% block lista %}
+                    
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {% block modals %}
+
+    {% endblock %}
+{% endblock %}
